@@ -7,6 +7,11 @@ document.getElementById('btn-add-money')
 
         // console.log('add money inside addMoney2.js', addMoney, pinNumber);
 
+        if (isNaN(addMoney)) {
+            alert('Failed to add money');
+            return;
+        }
+
         // wrong way to verify. do not try it at your serious website
         if (pinNumber === 1234) {
             const balance = getTextFieldValueById('account-balance');
